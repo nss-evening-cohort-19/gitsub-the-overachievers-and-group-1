@@ -1,2 +1,7 @@
-console.log('this worked haha');
-console.log('this sucks!');
+import { profile } from "./profile.js"
+
+const startUp = () => {
+  profile()
+}
+
+startUp()
