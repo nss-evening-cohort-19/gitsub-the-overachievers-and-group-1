@@ -55,3 +55,4 @@ const renderPackageCards = (array) => {
 const startApp = () => {
 renderPackageCards(packagesData);
 };
+startApp();
