@@ -72,8 +72,8 @@ const projListOnDom = (projectObjects) => {
   </ul>
 </div>
   `;
+  
 renderToDom("#projectList", domString)
-
 };
 
 const newProjectForm1 = () => {
@@ -130,5 +130,15 @@ const addFooter = () => {
   
   renderToDom("#footer", domString);
   };
+
+  const run = () => {
+    projListOnDom(projectObjects);
+    newProjectForm1();
+    addFooter();
+  };
+
+  run();
+
+
            
           
