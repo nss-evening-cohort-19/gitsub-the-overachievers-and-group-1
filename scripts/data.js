@@ -12,11 +12,13 @@ const users = [
   {
     id: 1,
     name: 'Lawrence B. Gillybee',
-    userName: 'biglawtheman@netscape.com',
-    userPhoto: "./images/lawrencebgillybee.png",
-    userBio: "Likes to party too",
+    userName: 'biglawtheman5',
+    userPhoto: "./images/lawrencebgillybee.jpeg",
+    userBio: "Likes to party. And code. And code and party. All day. All night.",
     userLocation: 'Paris, Texas',
     userEmail: 'lawrencebgillybee@yahoo.com',
+    userWebsite: 'www.lawrryb.com',
+    userTwitter: '@lawbtheman'
   },
   {
     id: 2,
