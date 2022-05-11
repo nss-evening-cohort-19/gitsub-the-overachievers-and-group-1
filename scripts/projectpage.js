@@ -1,4 +1,4 @@
-import { projectObjects } from "./scripts-main/data";
+import { projectObjects } from "./data";
 
 console.log("go team 1!");
 
