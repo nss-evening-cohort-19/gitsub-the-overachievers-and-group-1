@@ -1,3 +1,30 @@
 body {
   background-color: azure;
 }
+
+.following {
+  display: flex;
+  flex-direction: row;
+}
+
+.card {
+  background-color: black;
+  color: lightgrey;
+}
+
+.profileButtons {
+  margin-bottom: 5px;
+}
+
+.profileImage {
+  height: 75%;
+  width: 75%;
+  /* display: flex;
+  justify-content:space-evenly */
+}
+
+.btn {
+  background-color: grey;
+  color: white;
+  border: none;
+}
