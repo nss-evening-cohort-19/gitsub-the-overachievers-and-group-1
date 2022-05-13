@@ -1,6 +1,7 @@
 import { renderToDom } from "./renderToDom.js";
 import {users,favRepos} from "./data.js";
 import { favoriteRepos } from "./favoriteRepos.js";
+import { unpinButton } from "./unpin.js";
 
 //event listeners
 const eventListeners = () => {
@@ -37,6 +38,8 @@ const eventListeners = () => {
     })
   }
   inputStudentName();
+  unpinButton();
+
 }
 
 export {eventListeners};

@@ -5,6 +5,7 @@ const addFavoriteRepo = () => {
   //initialize variable domString
   let domString="";
   domString =`
+  <hr style="color:white;">
   <h5>Add a New Repo:</h5>
   <hr style="color:black;">
 
@@ -17,7 +18,7 @@ const addFavoriteRepo = () => {
       <label for="basic-url" class="form-label">Repository name <sup class="superscript">*</sup> </label>
 
       <div class="input-group mb-3">
-        <input type="text" class="form-control" id="name" aria-describedby="basic-addon3">
+        <input type="text" class="form-control" id="name" aria-describedby="basic-addon3" required>
       </div>
         <p>Great repository names are short and simple.</p>
       

@@ -29,6 +29,8 @@ const favoriteRepos = (array) => {
 
             <div class="icons"><i class="fa-solid fa-share-nodes"></i> ${repo.shares}</div>
 
+            <button type="button" class="btn-sm btn-danger unpinButton" id="delete--${repo.id}"><i class="fa-solid fa-delete-left"></i> Unpin</button>
+
           </div>
 
         </div>
