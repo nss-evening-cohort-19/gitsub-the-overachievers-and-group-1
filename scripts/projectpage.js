@@ -9,8 +9,8 @@ const projectObjects = [
   userId: 0,
   projName: "Pet Adoption",
   projDesc: "Design an app to aid in finding homes for pets",
-  update: "33 minutes ago",
-  status: "Old McDonald has a farm",
+  update: "updated: 33 minutes ago",
+  status: "status: Old McDonald has a farm",
  },
 
  {
@@ -18,8 +18,8 @@ const projectObjects = [
   userId: 1,
   projName: "Video Player",
   projDesc: "Build a working YouTube style video player",
-  update: "420 hours ago",
-  status: "net scripts and chill",
+  update: "updated: 420 hours ago",
+  status: "status: net scripts and chill",
  },
 
  {
@@ -27,8 +27,8 @@ const projectObjects = [
   userId: 2,
   projName: "Sorting Hat",
   projDesc: "Design an app that will randomly select houses for new students at Hogworts School of Magic",
-  update: "666 days ago",
-  status: "Hokus Pokus - I've been expelled",
+  update: "updated: 666 days ago",
+  status: "status: Hokus Pokus - I've been expelled",
  },
 
  {
@@ -36,8 +36,8 @@ const projectObjects = [
   userId: 3,
   projName: "Product Cards",
   projDesc: "Build an app to aid in finding homes for used instruments",
-  update: "9 years ago",
-  status: "beginner lessons initiated",
+  update: "updated: 9 years ago",
+  status: "status: beginner lessons initiated",
 
  },
 
@@ -46,11 +46,44 @@ const projectObjects = [
   userId: 4,
   projName: "First Group Project",
   projDesc: "Keep doing what you are doing, because you're currently doing your part in the first group project",
-  update: "1 second ago",
-  status: "All in this shit together",
+  update: "updated: 1 second ago",
+  status: "status: All in this shit together",
  },
 
 ];
+
+const users = [
+  {
+    id: 0,
+    name: 'Chris P. Bacon',
+    userName: 'chrissyPBacc89',
+    userPhoto: "./images/chrispbacon.png",
+    userBio: "Likes to party",
+    userLocation: 'Paris, France',
+    userEmail: 'chrispbacon@yahoo.com',
+  },
+  {
+    id: 1,
+    name: 'Lawrence B. Gillybee',
+    userName: 'biglawtheman5',
+    userPhoto: "./images/lawrencebgillybee.jpeg",
+    userBio: "Likes to party. And code. And code and party. All day. All night.",
+    userLocation: 'Paris, Texas',
+    userEmail: 'lawrencebgillybee@yahoo.com',
+    userWebsite: 'www.lawrryb.com',
+    userTwitter: '@lawbtheman'
+  },
+  {
+    id: 2,
+    name: 'Madeline Smith',
+    userName: 'maddysmith55',
+    userPhoto: "./images/madelinesmith.png",
+    userBio: "Likes to party as well",
+    userLocation: 'Paris, Chicago',
+    userEmail: 'madelinesmith@yahoo.com',
+  },
+];
+
 
 
 
@@ -59,21 +92,97 @@ const renderToDom = (divId, textToRender) => {
   selectedElement.innerHTML = textToRender;
 };
 
+//<div id="navbar"></div>
+const navBarOnDom = () => {
+let domString = "";
+domString = `
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">GitSub</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="http://localhost:8080/index.html">Overview</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://localhost:8080/repos.html">Repositories</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://localhost:8080/projects.html">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://localhost:8080/packages.html">Packages</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+`;
+
+renderToDom("#navbar", domString)
+
+};
+
+const profile = () => {
+  //initialize variable domString
+  let domString ='';
+  domString = 
+  `<div class="card" style="width: 18rem;">
+
+   <!--profile picture-->
+   <img src="${users[1].userPhoto}" class="rounded-circle profileImage rounded mx-auto d-block" alt="...">
+
+    <!--profile body-->
+    <div class="card-body">
+
+      <h2 style="font-size: 20px;">${users[1].name}</h2> 
+      <p style="margin-bottom:1.5em;"><i class="fa-solid fa-address-card"></i> ${users[1].userName} </p>
+
+      <p class="card-text" style="font-size:12px;">${users[1].userBio}</p>
+
+      <div class="profileButtons">
+        <button type="button" class="btn btn-outline-success" id="followButton"><i class="fa-solid fa-person-cane"></i> Follow</button>
+        <button type="button" class="btn btn-outline-success" id="sponsorButton"> <i class="fa-regular fa-heart"></i> Sponsor </button>
+        <button type="button" class="btn btn-outline-success" id="elipsesButton">...</button>
+      </div>
+
+      <div class="following">
+        <p style="font-size: 13px;margin-right: 10px;"><i class="fa-solid fa-user-group"></i><em>1.8k</em> followers</p>
+        <p style="font-size: 13px;margin-right: 10px;"><em>27</em> following</p>
+        <p style="font-size: 13px;margin-right: 10px;"><i class="fa-solid fa-star"></i><em>329</em></p>
+      </div>
+
+      <hr style="color:white;">
+
+      <p class="location"><i class="fa-solid fa-location-pin"></i></i> ${users[1].userLocation}</p>
+      <p class="email"><i class="fa-solid fa-envelope"></i> ${users[1].userEmail}</p>
+      <p class="email"><i class="fa-solid fa-link"></i> ${users[1].userWebsite}</p>
+      <p class="email"><i class="fa-solid fa-crow"></i> ${users[1].userTwitter}</p>
+
+    </div>
+  </div>
+  `;
+  renderToDom('#profile',domString)
+}
+
+
 const projListOnDom = (projectObjects) => {
   let domString = "";
+  for (const object of projectObjects) {
   domString +=`
-  <div class="card" style="width: 18rem;">
-  <div class="card-header">
-  Project: ${projectObjects.projName}
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">Description: ${projectObjects.projDesc}</li>
-    <li class="list-group-item">Last Updated: ${projectObjects.update}     -     Status: ${projectObjects.status}</li>
-  </ul>
-</div>
+    <tr>
+      <td>${object.projName}</td>
+      <td>${object.projDesc}</td>
+      <td>${object.update}   -   ${object.status}</td>
+    </tr>
   `;
-  
-renderToDom("#projectList", domString)
+  }
+  renderToDom("#proList", domString)
 };
 
 const newProjectForm1 = () => {
@@ -84,12 +193,12 @@ const newProjectForm1 = () => {
      <h5>NEW PROJECT</h5>
   </div>
   <div class="mb-3">
-    <label for="Project Name" class="form-label">Project Name</label>
+    <label for="Project Name" class="form-label">ENTER: New Project Name</label>
     <input type="text" class="form-control" id="nameOfNewProject" aria-describedby="makeNew">
-    <div id="makeNew" class="form-text">Enter new project name</div>
+    <div id="makeNew" class="form-text"></div>
   </div>
   <div class="mb-3">
-    <label for="projectDes" class="form-label">Description (optional)</label>
+    <label for="projectDes" class="form-label">ENTER: Description</label>
     <input type="type" class="form-control" id="desOfProject">
   </div>
   
@@ -110,7 +219,7 @@ const addFooter = () => {
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <nav class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
             
             <a class="nav-link" href="#">Terms</a>
@@ -123,15 +232,16 @@ const addFooter = () => {
             <a class="nav-link" href="#">API</a>
             <a class="nav-link" href="#">Training</a>
             <a class="nav-link" href="#">Blog</a>
-         </div>
-        </div>
+          </div>
       </div>
-   </nav>`;
+  </nav>`;
   
   renderToDom("#footer", domString);
   };
 
   const run = () => {
+    navBarOnDom();
+    profile();
     projListOnDom(projectObjects);
     newProjectForm1();
     addFooter();
