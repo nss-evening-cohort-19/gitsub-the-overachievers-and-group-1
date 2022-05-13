@@ -84,3 +84,38 @@ const projectObjects = [
 ];
 
 export {projectObjects}
+
+const reposData = [
+  {
+    id: 1,
+    repoName: "Tic Tac Toe Game",
+    repoDesc: "Easy tic tac toe game",
+    repoLang: "JavaScript"
+  },
+  {
+    id: 2,
+    repoName: "Tamagotchi",
+    repoDesc: "A virtual pet",
+    repoLang: "JavaScript"
+  },
+  {
+    id: 3,
+    repoName: "Bio Site",
+    repoDesc: "My homepage",
+    repoLang: "HTML"
+  },
+  {
+    id: 4,
+    repoName: "Snake Game",
+    repoDesc: "A game",
+    repoLang: "Python"
+  },
+  {
+    id: 5,
+    repoName: "Go practice",
+    repoDesc: "Practice for learning Go",
+    repoLang: "Go"
+  }
+];
+
+export {reposData}
