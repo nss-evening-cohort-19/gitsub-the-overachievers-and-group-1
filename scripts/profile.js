@@ -1,6 +1,7 @@
 import {renderToDom} from "./renderToDom.js"
-import { users } from "./data.js";
+import { users,favRepos } from "./data.js";
 
+//render profile card to dom with properties of user object array
 const profile = () => {
   //initialize variable domString
   let domString ='';

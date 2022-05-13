@@ -31,7 +31,42 @@ const users = [
   },
 ]
 
-export {users}
+const favRepos = [
+  {
+    id: 0,
+    name:'sorting-hats',
+    about:'a repo designed to help people who are obsessed with Harry Potter find the lord',
+    language:'Javascript',
+    favorites: 39,
+    shares: 2
+  },
+  {
+    id: 1,
+    name:'pet-adoption',
+    about:'a tool designed to get rid of your pet at no cost!',
+    language:'Javascript',
+    favorites: 39,
+    shares: 32
+  },
+  {
+    id: 2,
+    name:'gregorian-chants',
+    about:'a tool designed to lull you into a deep trance with 100% vegan Gregorian Chants!',
+    language:'Python',
+    favorites: 389,
+    shares: 232
+  },
+  {
+    id: 3,
+    name:'help-me-please!',
+    about:'a tool designed to help me please!!',
+    language:'Javascript',
+    favorites: 19,
+    shares: 3
+  }
+]
+
+export {users,favRepos};
 
 const projectObjects = [
  
