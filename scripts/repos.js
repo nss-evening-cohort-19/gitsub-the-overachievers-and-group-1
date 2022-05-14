@@ -1,33 +1,33 @@
-import { users } from "./data.js";
+import { users, favRepos } from "./data.js";
 
 const reposData = [
   {
     id: 1,
-    repoName: "Tic Tac Toe Game",
+    repoName: "tic-tac-toe",
     repoDesc: "Easy tic tac toe game",
     repoLang: "JavaScript"
   },
   {
     id: 2,
-    repoName: "Tamagotchi",
+    repoName: "tamagotchi",
     repoDesc: "A virtual pet",
     repoLang: "JavaScript"
   },
   {
     id: 3,
-    repoName: "Bio Site",
+    repoName: "bio-site",
     repoDesc: "My homepage",
     repoLang: "HTML"
   },
   {
     id: 4,
-    repoName: "Snake Game",
+    repoName: "snake-game",
     repoDesc: "A game",
     repoLang: "Python"
   },
   {
     id: 5,
-    repoName: "Go practice",
+    repoName: "go-practice",
     repoDesc: "Practice for learning Go",
     repoLang: "Go"
   }
@@ -41,11 +41,18 @@ const renderToDom = (divId,textToRender) => {
 const renderReposCards = (repos) => {
   let domString = "";
   for (let repo of repos) {
-    domString += `<div class="card" style="width: 18rem;">
-    <div class="card-body">
+    domString += `<div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-3 repoCard">
       <h5 class="card-title">${repo.repoName}</h5>
-      <p class="card-text">${repo.repoDesc}</p>
-      <p class="card-text">${repo.repoLang}</p>
+      <div class ="repoInfo>
+      <p class="card-text"><br>${repo.repoDesc}</p><br>
+      <p class="card-text">${repo.repoLang}</p><br>
+      <div id="addFavRepoButton" class="topButtons">
+        <button type="submit" class="btn btn-primary btn-md allButton" id="addFavRepoBtn">Favorite</button>
+        </div>
+    </div>
+    </div>
     </div>
   </div>`
   };
@@ -53,7 +60,6 @@ const renderReposCards = (repos) => {
 };
 
 const profile = () => {
-  //initialize variable domString
   let domString ='';
   domString = 
   `<div class="card" style="width: 18rem;">
