@@ -20,7 +20,8 @@ const users = [
     userWebsite: 'www.lawrryb.com',
     userTwitter: '@lawbtheman',
     highlights: ['Toybox', 'Operation Santa'],
-    organizations: ["https://raw.githubusercontent.com/devicons/devicon/master/icons/ruby/ruby-original.svg","https://www.vectorlogo.zone/logos/apple_objectivec/apple_objectivec-icon.svg"]
+    organizations: ["https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg","https://www.vectorlogo.zone/logos/apple_objectivec/apple_objectivec-icon.svg","https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"],
+    sponsors: ["https://deadline.com/wp-content/uploads/2022/04/Nightmare-On-Elm-Street.jpg?w=640&h=321&crop=1","https://assets.newatlas.com/dims4/default/be6af5d/2147483647/strip/true/crop/3504x2336+0+0/resize/1440x960!/format/webp/quality/90/?url=http%3A%2F%2Fnewatlas-brightspot.s3.amazonaws.com%2F78%2F57%2Fd4275eaf4b1ea04ddf88d6855857%2Fdepositphotos-259230322-xl.jpg","https://cdn.mos.cms.futurecdn.net/Ev3irSe2WxYCdyGSx6rDES-970-80.jpg.webp","https://i.kym-cdn.com/entries/icons/original/000/018/385/Rs_634x1024-130605092844-634.DespMe2.mh.060513.jpg","https://www.dullmensclub.com/new/wp-content/uploads/2013/07/hotdog-plain.jpg"]
   },
   {
     id: 2,

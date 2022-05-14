@@ -28,15 +28,15 @@ const profile = () => {
       <div class="following">
         <p style="font-size: 13px;margin-right: 10px;"><i class="fa-solid fa-user-group"></i><em>1.8k</em> followers</p>
         <p style="font-size: 13px;margin-right: 10px;"><em>27</em> following</p>
-        <p style="font-size: 13px;margin-right: 10px;"><i class="fa-solid fa-star"></i><em>329</em></p>
+        <p style="font-size: 13px;margin-right: 10px;"><i class="fa-solid fa-star star"></i><em>329</em></p>
       </div>
 
       <hr style="color:white;">
 
       <p class="location"><i class="fa-solid fa-location-pin"></i></i> ${users[1].userLocation}</p>
-      <p class="email"><i class="fa-solid fa-envelope"></i> ${users[1].userEmail}</p>
-      <p class="email"><i class="fa-solid fa-link"></i> ${users[1].userWebsite}</p>
-      <p class="email"><i class="fa-solid fa-crow"></i> ${users[1].userTwitter}</p>
+      <p class="email"><i class="fa-solid fa-envelope"></i><a href="mailto:  lawrencebgillybee@yahoo.com" class="linky"> ${users[1].userEmail}</a></p>
+      <p class="email"><i class="fa-solid fa-link"><a href="http://www.google.com" class="linky"></i> ${users[1].userWebsite}</a></p>
+      <p class="email"><i class="fa-solid fa-crow"></i><a href="http://www.twitter.com" class="linky"> ${users[1].userTwitter}</a></p>
 
       <hr style="color:white;">
 
@@ -50,8 +50,21 @@ const profile = () => {
       <h5 class="highlightstext"><font size="4">Organizations:</font></h5>
 
       <div class="organizationsProfile">
-        <img src=${users[1].organizations[1]} />
-      
+        <img src=${users[1].organizations[0]} class="orgimage"/>
+        <img src=${users[1].organizations[1]} class="orgimage"/>
+        <img src=${users[1].organizations[2]} class="orgimage"/>
+      </div>
+
+      <hr style="color:white;">
+
+      <h5 class="highlightstext"><font size="4">Sponsors:</font></h5>
+
+      <div class="sponsorsProfile">
+        <img src=${users[1].sponsors[0]} class="sponsorimage rounded-circle"/>
+        <img src=${users[1].sponsors[1]} class="sponsorimage rounded-circle"/>
+        <img src=${users[1].sponsors[2]} class="sponsorimage rounded-circle"/>
+        <img src=${users[1].sponsors[3]} class="sponsorimage rounded-circle"/>
+        <img src=${users[1].sponsors[4]} class="sponsorimage rounded-circle"/>
       </div>
 
     </div>
