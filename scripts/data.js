@@ -28,6 +28,8 @@ const users = [
     userBio: "Likes to party as well",
     userLocation: 'Paris, Chicago',
     userEmail: 'madelinesmith@yahoo.com',
+    userWebsite: 'www.lawrryb.com',
+    userTwitter: '@lawbtheman'
   },
 ]
 
