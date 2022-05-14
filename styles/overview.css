@@ -106,3 +106,21 @@ body {
 .highlightstext {
   margin-bottom: 20px;
 }
+
+.star {
+  color: yellow;
+}
+
+.linky {
+  color: lightgrey;
+  text-decoration: none;
+}
+
+.orgimage {
+  height: 30px;
+}
+
+.sponsorimage {
+  height: 35px;
+  width: 35px;
+}
