@@ -13,21 +13,81 @@
 </head>
 <body>
 
-  <div id="navbar"></div>
+  <div id="navbar">
 
-  <div id="profile"></div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">GitSub</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="http://localhost:8080/index.html">Overview</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://localhost:8080/repos.html">Repositories</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://localhost:8080/projects.html">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://localhost:8080/packages.html">Packages</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
 
-  <!-- stretch goal -->
-  <div id="readMe"></div>
+  <div class="centerpage">
 
-  <div id="pinnedRepos"></div>
+    <div id="profile"></div>
+    
+    <div class="ab">
 
-  <div id="footer"></div>
+      <!-- stretch goal -->
+      <div id="readMe"></div>
+
+      <div id="favRepos" class="favoRepos"></div>
+
+      <div id="addFavRepo"></div>
+
+    </div>
+
+  </div>
+
+  <div id="footer">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">*GITSUB*</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+  
+            <a class="nav-link" href="#">Terms</a>
+            <a class="nav-link" href="#">Privacy</a>
+            <a class="nav-link" href="#">Security</a>
+            <a class="nav-link" href="#">Status</a>
+            <a class="nav-link" href="#">Help</a>
+            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="#">Pricing</a>
+            <a class="nav-link" href="#">API</a>
+            <a class="nav-link" href="#">Training</a>
+            <a class="nav-link" href="#">Blog</a>
+  
+          </div>
+    </nav>
+  </div>
 
 
-
-
-
+  <!-- md block -->
+  <script type="module" src="https://md-block.verou.me/md-block.js"></script>
   <!-- bootstrap js -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   <!-- link to overview.js -->
