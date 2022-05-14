@@ -38,6 +38,22 @@ const profile = () => {
       <p class="email"><i class="fa-solid fa-link"></i> ${users[1].userWebsite}</p>
       <p class="email"><i class="fa-solid fa-crow"></i> ${users[1].userTwitter}</p>
 
+      <hr style="color:white;">
+
+      <h5 class="highlightstext"><font size="4">Highlights:</font></h5>
+
+      <p><i class="fa-regular fa-snowflake"></i> ${users[1].highlights[0]}</p>
+      <p><i class="fa-solid fa-star"></i> ${users[1].highlights[1]}</p>
+
+      <hr style="color:white;">
+
+      <h5 class="highlightstext"><font size="4">Organizations:</font></h5>
+
+      <div class="organizationsProfile">
+        <img src=${users[1].organizations[1]} />
+      
+      </div>
+
     </div>
   </div>
   `;

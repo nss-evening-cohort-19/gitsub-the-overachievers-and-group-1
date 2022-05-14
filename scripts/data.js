@@ -18,7 +18,9 @@ const users = [
     userLocation: 'Paris, Texas',
     userEmail: 'lawrencebgillybee@yahoo.com',
     userWebsite: 'www.lawrryb.com',
-    userTwitter: '@lawbtheman'
+    userTwitter: '@lawbtheman',
+    highlights: ['Toybox', 'Operation Santa'],
+    organizations: ["https://raw.githubusercontent.com/devicons/devicon/master/icons/ruby/ruby-original.svg","https://www.vectorlogo.zone/logos/apple_objectivec/apple_objectivec-icon.svg"]
   },
   {
     id: 2,

@@ -1,4 +1,4 @@
-import { renderToDom } from "./renderToDom.js";
+import { renderToDom } from "../renderToDom.js"
 
 const readMeToDom = () => {
   //initialize variable domString

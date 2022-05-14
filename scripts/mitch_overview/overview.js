@@ -1,7 +1,7 @@
-import { profile } from "./profile.js"
+import { profile } from "../profile.js"
 import { readMeToDom } from "./readMe.js"
 import { favoriteRepos } from "./favoriteRepos.js"
-import { favRepos } from "./data.js"
+import { favRepos } from "../data.js"
 import { addFavoriteRepo } from "./addFavoriteRepo.js"
 import { eventListeners } from "./overviewEventListeners.js"
 
