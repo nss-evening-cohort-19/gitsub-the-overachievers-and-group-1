@@ -171,6 +171,28 @@ const profile = () => {
 }
 
 
+const searchProj = () => {
+  let domString = "";
+  domString =`
+
+<div class="row g-3 align-items-center">
+  <div class="col-auto">
+    <label for="inputSearch" class="col-form-label">SEARCH</label>
+  </div>
+  <div class="col-auto">
+    <input type="search" id="inputSearch" class="form-control" aria-describedby="searchHelpInline">
+  </div>
+  <div class="col-auto">
+    <span id="searcher" class="form-text">
+      Must search by project name.
+    </span>
+  </div>
+</div>`
+
+ renderToDom("#searchMe", domString);
+};
+
+
 const projListOnDom = (projectObjects) => {
   let domString = "";
   for (const object of projectObjects) {
@@ -274,6 +296,7 @@ const addFooter = () => {
 
   const run = () => {
     navBarOnDom();
+    searchProj();
     profile();
     projListOnDom(projectObjects);
     newProjectForm1();
