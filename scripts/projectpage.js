@@ -189,18 +189,27 @@ const newProjectForm1 = () => {
   let domString = "";
   domString =`
   <form id="newProject">
-  <div id="formHeader>
-     <h5>NEW PROJECT</h5>
-  </div>
-  <div class="mb-3">
-    <label for="Project Name" class="form-label">ENTER: New Project Name</label>
-    <input type="text" class="form-control" id="nameOfNewProject" aria-describedby="makeNew">
-    <div id="makeNew" class="form-text"></div>
-  </div>
-  <div class="mb-3">
-    <label for="projectDes" class="form-label">ENTER: Description</label>
-    <input type="type" class="form-control" id="desOfProject">
-  </div>
+    <div class="mb-3">
+      <h3>Create a New Project</h3>
+  
+      <div class="mb-3">
+        <label for="Project Name" class="form-label">ENTER: New Project Name</label>
+        <input type="text" class="form-control" id="nameOfNewProject" aria-describedby="makeNew">
+        <div id="makeNew" class="form-text"></div>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="projectDes" class="form-label">ENTER: Description</label>
+      <input type="type" class="form-control" id="desOfProject">
+    </div>
+    <div class="mb-3">
+      <label for="projectDes" class="form-label">ENTER: Update</label>
+      <input type="type" class="form-control" id="upOfProject">
+    </div>
+    <div class="mb-3">
+      <label for="projectDes" class="form-label">ENTER: Status Comment</label>
+      <input type="type" class="form-control" id="statOfProject">
+    </div>
   
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
@@ -235,9 +244,33 @@ const addFooter = () => {
           </div>
       </div>
   </nav>`;
-  
   renderToDom("#footer", domString);
+};
+
+  /*        EVENT LISTENERS          */
+
+  const eventListeners = () => {
+
+    document.querySelector("#newProjectForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+  
+      const addNewProject = {
+        pk: projectObjects[projectObjects.length - 1].sId + 1,
+        userId: projectObjects[projectObjects.length - 1].sId + 1,
+        projName: document.querySelector("#nameOfNewProject").value,
+        projDesc: document.querySelector("#desOfProject").value,
+        update: document.querySelector("#upOfProject").value,
+        status: document.querySelector("#statOfProject").value,
+      };
+  
+  
+      projectObjects.push(addNewProject);
+      projListOnDom(projectObjects, "#newProjectForm");
+      document.querySelector("#newProject").reset();
+    });
   };
+  
+  
 
   const run = () => {
     navBarOnDom();
@@ -245,10 +278,7 @@ const addFooter = () => {
     projListOnDom(projectObjects);
     newProjectForm1();
     addFooter();
+    eventListeners();
   };
 
   run();
-
-
-           
-          
