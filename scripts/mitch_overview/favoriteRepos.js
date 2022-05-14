@@ -1,5 +1,5 @@
-import { renderToDom } from "./renderToDom.js";
-import {users,favRepos} from "./data.js";
+import { renderToDom } from "../renderToDom.js"
+import {users, favRepos} from "../data.js"
 
 //will take array of favorite repo objects as argument and render cards to dom with properties
 const favoriteRepos = (array) => {

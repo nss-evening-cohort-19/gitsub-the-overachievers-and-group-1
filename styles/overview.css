@@ -14,7 +14,7 @@ body {
 }
 
 .profileButtons {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .profileImage {
@@ -101,4 +101,8 @@ body {
 
 .ab {
   width: 60vw;
+}
+
+.highlightstext {
+  margin-bottom: 20px;
 }

@@ -1,5 +1,5 @@
-import { renderToDom } from "./renderToDom.js";
-import {users,favRepos} from "./data.js";
+import { renderToDom } from "../renderToDom.js";
+import {users,favRepos} from "../data.js";
 import { favoriteRepos } from "./favoriteRepos.js";
 import { unpinButton } from "./unpin.js";
 
