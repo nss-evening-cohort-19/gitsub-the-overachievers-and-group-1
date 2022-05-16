@@ -1,4 +1,5 @@
-import { users, reposData } from "./data.js";
+import { users, reposData, favRepos } from "./data.js";
+import { addFavoriteRepo } from "./mitch_overview/addFavoriteRepo.js";
 
 const renderToDom = (divId,textToRender) => {
   const selectedElement = document.querySelector(divId);
@@ -16,7 +17,7 @@ const renderReposCards = (repos) => {
       <p class="card-text"><br>${repo.repoDesc}</p><br>
       <p class="card-text">${repo.repoLang}</p><br>
       <div id="addFavRepoButton" class="topButtons">
-        <button type="submit" class="btn btn-primary btn-md allButton" id="addFavRepoBtn">Favorite</button>
+        <button type="submit" class="btn btn-primary btn-md allButton" id="favorite--${repo.id}">Favorite</button>
         </div>
     </div>
     </div>
@@ -112,7 +113,7 @@ renderToDom("#newRepoForm", domString)
 
 };
 
-const formEventListeners = () => {
+const eventListeners = () => {
 
   const form = document.querySelector('#newRepoForm');
   form.addEventListener("submit", (e) => {
@@ -122,10 +123,22 @@ const formEventListeners = () => {
       repoDesc: document.querySelector("#repoDesc").value,
       repoLang: document.querySelector("#repoLang").value
     };
-    reposData.push(newRepoObj);
-    renderReposCards(reposData);
 
+
+    reposData.push(newRepoObj);
     form.reset();
+
+    renderReposCards(reposData);
+  });
+
+  document.querySelector("#reposCards").addEventListener("click", (e) => {
+    if (e.target.id.includes("favorite")) {
+      const [method, id] = e.target.id.split("--");
+      let index = renderReposCards.findIndex((taco) => taco.id === parseInt(id));
+      favRepos.push(repos[index]);
+      reposData.splice(index, 1);
+      renderReposCards(reposData);
+    }
   });
 }
 
@@ -134,7 +147,7 @@ renderReposCards(reposData);
 profile();
 newRepoForm();
 document.querySelector('#searchResult').addEventListener('keyup', search);
-formEventListeners();
+eventListeners();
 };
 
 startApp();
