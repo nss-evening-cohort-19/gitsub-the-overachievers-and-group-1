@@ -186,6 +186,7 @@ const searchProj = () => {
     <span id="searcher" class="form-text">
       Must search by project name.
     </span>
+    <button type="submit" id="resetList" class="btn btn-primary">Reset</button>
   </div>
 </div>`
 
@@ -290,8 +291,24 @@ const addFooter = () => {
       projListOnDom(projectObjects, "#newProjectForm");
       document.querySelector("#newProject").reset();
     });
+
+   
+     document.querySelector("#inputSearch").addEventListener("keyup", (e) => {
+       console.log(e.target.value.toLowerCase());
+       const inSearch = e.target.value.toLowerCase();
+       const outSearch = projectObjects.filter(taco => taco.projName.toLowerCase().includes(inSearch));
+    
+      
+      renderToDom("#proList", outSearch);
+    });
+
+    document.querySelector("#resetList").addEventListener("click", (e) => {
+      if (e.target.id.includes("resetList")) {
+        projectListOnDom(projectObjects);
+      };
+    });
+
   };
-  
   
 
   const run = () => {
