@@ -68,3 +68,17 @@ body {
 #footer {
   margin-top: 3%;
 }
+
+.orgimage {
+  height: 30px;
+}
+
+.sponsorimage {
+  height: 35px;
+  width: 35px;
+}
+
+.linky {
+  color: lightgrey;
+  text-decoration: none;
+}
