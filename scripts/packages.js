@@ -6,41 +6,35 @@ const packagesData = [
     id: 1,
     packName: "Docker",
     packDesc: "Docker helps developers bring their ideas to life by conquering the complexity of app development.",
-    packNew: "",
     packLink: "https://github.com/docker"
   }, 
   {
     id: 2,
     packName: "RubyGems",
     packDesc: "RubyGems.org is the Ruby community’s gem hosting service. Instantly publish your gems and then install them. Use the API to find out more about available gems. Become a contributor and improve the site yourself.",
-    packNew: "",
     packLink: "https://github.com/rubygems"
   }, 
   {
     id: 3,
     packName: "Apache Maven",
     packDesc: "Apache Maven is a software project management and comprehension tool. Based on the concept of a project object model (POM), Maven can manage a project's build, reporting and documentation from a central piece of information.",
-    packNew: "",
     packLink: "https://maven.apache.org/"
   },
   {
     id: 4, 
     packName: "npm",
     packDesc: "We're npm, Inc., the company behind Node package manager, the npm Registry, and npm CLI. We offer those to the community for free, but our day job is building and selling useful tools for developers like you.",
-    packNew: "",
     packLink: "https://github.com/npm"
   }, {
     id: 5,
     packName: "NuGet",
     packDesc: "NuGet is a package manager designed to enable developers to share reusable code. It is a software as a service solution whose client app is free and open-source. The Outercurve Foundation initially created it under the name NuPack.",
-    packNew: "",
     packLink: "https://github.com/NuGet"
   }, 
   {
     id: 6,
     packName: "Containers",
     packDesc: "GitHub Container Registry introduces easy sharing across organizations, fine-grained permissions, and free, anonymous access for public container images.",
-    packNew: "",
     packLink: "https://github.com/containers"
   }
 ];
@@ -95,15 +89,15 @@ const profile = () => {
   `<div class="card" style="width: 18rem;">
 
    <!--profile picture-->
-   <img src="${users[2].userPhoto}" class="rounded-circle profileImage rounded mx-auto d-block" alt="...">
+   <img src="${users[1].userPhoto}" class="rounded-circle profileImage rounded mx-auto d-block" alt="...">
 
     <!--profile body-->
     <div class="card-body">
 
-      <h2 style="font-size: 20px;">${users[2].name}</h2> 
-      <p style="margin-bottom:1.5em;"><i class="fa-solid fa-address-card"></i> ${users[2].userName} </p>
+      <h2 style="font-size: 20px;">${users[1].name}</h2> 
+      <p style="margin-bottom:1.5em;"><i class="fa-solid fa-address-card"></i> ${users[1].userName} </p>
 
-      <p class="card-text" style="font-size:12px;">${users[2].userBio}</p>
+      <p class="card-text" style="font-size:12px;">${users[1].userBio}</p>
 
       <div class="profileButtons">
         <button type="button" class="btn btn-outline-success" id="followButton"><i class="fa-solid fa-person-cane"></i> Follow</button>
@@ -119,10 +113,10 @@ const profile = () => {
 
       <hr style="color:white;">
 
-      <p class="location"><i class="fa-solid fa-location-pin"></i></i> ${users[2].userLocation}</p>
-      <p class="email"><i class="fa-solid fa-envelope"></i> ${users[2].userEmail}</p>
-      <p class="email"><i class="fa-solid fa-link"></i> ${users[2].userWebsite}</p>
-      <p class="email"><i class="fa-solid fa-crow"></i> ${users[2].userTwitter}</p>
+      <p class="location"><i class="fa-solid fa-location-pin"></i></i> ${users[1].userLocation}</p>
+      <p class="email"><i class="fa-solid fa-envelope"></i><a href="mailto: madelinesmith@yahoo.com" class="linky">${users[1].userEmail}</a></p>
+      <p class="email"><i class="fa-solid fa-link"></i><a href="https://www.google.com/">${users[1].userWebsite}</a></p>
+      <p class="email"><i class="fa-solid fa-crow"></i><a href="https://twitter.com/">${users[1].userTwitter}</a></p>
 
     </div>
   </div>
@@ -150,7 +144,6 @@ const renderPackageCards = (array) => {
     <div class="card-body">
       <h5 class="card-title">${type.packName}</h5>
       <p class="card-text">${type.packDesc}</p>
-      <p class="card-text">${type.packNew}</p>
       <a href="${type.packLink}"><p class="link">Learn More</p></a>
       <button class="btn btn-danger" id="delete--${type.id}">Delete</button>
     </div>
@@ -165,7 +158,7 @@ const addPackageForm = () => {
   domString = `<form id="newPackage">
   <div class="mb-3">
     <h3>Create a New Package</h3>
-    <p>By publishing your package, you can coordinate, track, and update your package as needed. You can use package managers listed below to make life easier.</p>
+    <p>By publishing your package, you can coordinate, track, and update your package as needed and share that service with others.</p>
     <label for="package-name" class="form-label">Package Name</label>
     <input type="text" class="form-control" id="packName" aria-describedby="makeNew">
     <div id="packName" class="form-text">
@@ -174,20 +167,6 @@ const addPackageForm = () => {
     <label for="package-desc" class="form-label">Description (optional)</label>
     <input type="text" class="form-control" id="packDesc">
   </div>
-<div id="client-manager">
-  <h5>Select Package Managers</h5>
-  <div class="select-menu">
-  <select class="form-select form-control-lg" id="packNew" aria-label="packNew" required>
-    <option value="">Select a Package Manager</option>
-    <option value="docker">Docker</option>
-    <option value="rubygems">RubyGems</option>
-    <option value="apachemaven">Apache Maven</option>
-    <option value="npm">npm</option>
-    <option value="nuget">NuGet</option>
-    <option value="containers">Containers</option>
-  </select>
-</div>
-
 <button type="submit" name="clear" id="clear" class="btn btn-success">Create Package</button>
 </form>`
 
@@ -236,7 +215,7 @@ const eventListeners = () => {
   const newPackageObj = {
     packName: document.querySelector("#packName").value,
     packDesc: document.querySelector("#packDesc").value,
-    packNew: document.querySelector("#packNew").value
+    // packNew: document.querySelector("#packNew").value
   };
   packagesData.push(newPackageObj);
   renderPackageCards(packagesData);

@@ -20,8 +20,7 @@ body {
 .profileImage {
   height: 75%;
   width: 75%;
-  /* display: flex;
-  justify-content:space-evenly */
+  border-style: solid;
 }
 
 .btn {
@@ -71,7 +70,7 @@ body {
   /* border: solid black 2px; */
   position: relative;
   min-height: 100vh;
-}
+} 
 
 #footer{
   width: 100vw;
@@ -114,4 +113,12 @@ body {
   padding: 20px;
   border-radius: 20px;
   border-width: 10px;
+}
+
+#packagesCards {
+  margin: 5px;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  width: auto;
 }
