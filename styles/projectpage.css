@@ -112,9 +112,19 @@ body {
   padding: 15px;
 }
 
-#searchMe {
+#searchResult {
   display: flex;
  justify-content: right;
- margin-top: 10px;
- margin-right: 90px;
+ margin-top: 20px;
+ margin-right: 175px;
+ height: fit-content; 
+}
+
+h3 {
+  margin-right: 20px;
+  text-size-adjust: 70%;
+}
+
+#read {
+  color: black;
 }
