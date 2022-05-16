@@ -124,3 +124,15 @@ body {
   height: 35px;
   width: 35px;
 }
+
+#followButton:hover {
+  background-color: red;
+}
+
+#sponsorButton:hover {
+  background-color: red;
+}
+
+#elipsesButton:hover {
+  background-color: red;
+}

@@ -171,26 +171,27 @@ const profile = () => {
 }
 
 
-const searchProj = () => {
-  let domString = "";
-  domString =`
+// const searchProj = () => {
+//   let domString = "";
+//   domString =`
 
-<div class="row g-3 align-items-center">
-  <div class="col-auto">
-    <label for="inputSearch" class="col-form-label">SEARCH</label>
-  </div>
-  <div class="col-auto">
-    <input type="search" id="inputSearch" class="form-control" aria-describedby="searchHelpInline">
-  </div>
-  <div class="col-auto">
-    <span id="searcher" class="form-text">
-      Must search by project name.
-    </span>
-  </div>
-</div>`
+// <div class="row g-3 align-items-center">
+//   <div class="col-auto">
+//     <label for="inputSearch" class="col-form-label">SEARCH</label>
+//   </div>
+//   <div class="col-auto">
+//     <input type="search" id="inputSearch" class="form-control" aria-describedby="searchHelpInline">
+//   </div>
+//   <div class="col-auto">
+//     <span id="searcher" class="form-text">
+//       Must search by project name.
+//     </span>
+//     <button type="submit" id="resetList" class="btn btn-primary">Reset</button>
+//   </div>
+// </div>`
 
- renderToDom("#searchMe", domString);
-};
+//  renderToDom("#searchMe", domString);
+// };
 
 
 const projListOnDom = (projectObjects) => {
@@ -290,13 +291,38 @@ const addFooter = () => {
       projListOnDom(projectObjects, "#newProjectForm");
       document.querySelector("#newProject").reset();
     });
+    // SEARCH: 
+
+      const search = (e) => {
+        const userInput = e.target.value.toLowerCase();
+        const searchResult = projectObjects.filter(type => type.projName.toLowerCase().includes(userInput)) ||
+        type.projDesc.toLowerCase().includes(userInput) 
+
+        projListOnDom(searchResult);
+      }
+   
+    //  document.querySelector("#inputSearch").addEventListener("keyup", (e) => {
+    //    console.log(e.target.value.toLowerCase());
+    //    const inSearch = e.target.value.toLowerCase();
+    //    const outSearch = projectObjects.filter(taco => taco.projName.toLowerCase().includes(inSearch));
+    
+      
+    //   renderToDom("#proList", outSearch);
+    // });
+
+    // document.querySelector("#resetList").addEventListener("click", (e) => {
+    //   if (e.target.id.includes("resetList")) {
+    //     projectListOnDom(projectObjects);
+    //   };
+    // });
+    document.querySelector('#searchResult').addEventListener('keyup', search);
+
   };
-  
   
 
   const run = () => {
     navBarOnDom();
-    searchProj();
+    // searchProj();
     profile();
     projListOnDom(projectObjects);
     newProjectForm1();
