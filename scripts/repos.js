@@ -155,9 +155,8 @@ const eventListeners = () => {
 
 
     reposData.push(newRepoObj);
-    form.reset();
-
     renderReposCards(reposData);
+    form.reset();
   });
 
   document.querySelector("#reposCards").addEventListener("click", (e) => {
