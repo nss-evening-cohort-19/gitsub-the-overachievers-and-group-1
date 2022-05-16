@@ -1,37 +1,4 @@
-import { users, favRepos } from "./data.js";
-
-const reposData = [
-  {
-    id: 1,
-    repoName: "tic-tac-toe",
-    repoDesc: "Easy tic tac toe game",
-    repoLang: "JavaScript"
-  },
-  {
-    id: 2,
-    repoName: "tamagotchi",
-    repoDesc: "A virtual pet",
-    repoLang: "JavaScript"
-  },
-  {
-    id: 3,
-    repoName: "bio-site",
-    repoDesc: "My homepage",
-    repoLang: "HTML"
-  },
-  {
-    id: 4,
-    repoName: "snake-game",
-    repoDesc: "A game",
-    repoLang: "Python"
-  },
-  {
-    id: 5,
-    repoName: "go-practice",
-    repoDesc: "Practice for learning Go",
-    repoLang: "Go"
-  }
-];
+import { users, reposData } from "./data.js";
 
 const renderToDom = (divId,textToRender) => {
   const selectedElement = document.querySelector(divId);
@@ -100,6 +67,14 @@ const profile = () => {
   renderToDom('#profile',domString)
 };
 
+const search = (e) => {
+  const userInput = e.target.value.toLowerCase();
+  const searchResult = reposData.filter(type => type.repoName.toLowerCase().includes(userInput)) ||
+  type.repoDesc.toLowerCase().includes(userInput)
+
+  renderReposCards(searchResult);
+}
+
 const newRepoForm = () => {
   let domString = "";
   domString =`
@@ -158,6 +133,7 @@ const startApp = () => {
 renderReposCards(reposData);
 profile();
 newRepoForm();
+document.querySelector('#searchResult').addEventListener('keyup', search);
 formEventListeners();
 };
 

@@ -17,6 +17,10 @@ body {
   width: 75%;
 }
 
+#profile {
+  margin-left: 7%;
+}
+
 .btn {
   background-color: grey;
   color: white;
@@ -31,8 +35,6 @@ body {
 
 #repoDiv {
   width: 100vw;
-  /* border: 1px solid lightgrey;
-  padding: 5px; */
 }
 
 .repoCard {
@@ -50,4 +52,19 @@ body {
   justify-content: space-between;
   flex-flow:row wrap;
   width: auto;
+}
+
+#newRepoForm {
+  margin-left: 17.5%;
+  width: 50vw;;
+}
+
+#searchResult {
+  margin-top: 2%;
+  margin-left: 17.5%;
+  width: 50vw;;
+}
+
+#footer {
+  margin-top: 3%;
 }
